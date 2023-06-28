@@ -3,6 +3,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
+import java.util.stream.Collectors;
 
 public class JavaLearn {
     public static void main(String[] args) {
@@ -14,6 +15,8 @@ public class JavaLearn {
             System.out.println(array[i]);
 
         }
+        List<?> list= Arrays.stream(array).boxed().collect(Collectors.toList());
+        System.out.println(list);
 //        System.out.println(array);
 
         String[] name = {"janice","livia","fred"};
